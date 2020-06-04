@@ -20,17 +20,7 @@ namespace exercise_project
     public class Startup
     {
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
-        {
-            /*
-            var builder = new ConfigurationBuilder()
-                    .SetBasePath(env.ContentRootPath)
-                    .AddYamlFile("exercise.yaml", optional: false)
-                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
-
-            builder.AddEnvironmentVariables();
-            Configuration = builder.Build();
-            */
+        {            
             Configuration = configuration;
         }
 
@@ -45,8 +35,10 @@ namespace exercise_project
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+	    var clientEndPoint = new Options.ClientEndPoint();
+            Configuration.GetSection(nameof(Options.ClientEndPoint)).Bind(clientEndPoint);
             app.UseCors(options =>
-            options.WithOrigins("http://localhost:3000")
+            options.WithOrigins(clientEndPoint.Url)
             .AllowAnyHeader()
             .AllowAnyMethod());
 

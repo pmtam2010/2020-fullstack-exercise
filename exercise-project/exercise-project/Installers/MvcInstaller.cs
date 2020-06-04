@@ -19,6 +19,11 @@ namespace exercise_project.Installers
             services.AddMvc();
             services.AddCors();
 
+
+            var clientEndPoint = new ClientEndPoint();
+            configuration.Bind(nameof(clientEndPoint), clientEndPoint);
+            services.AddSingleton<ClientEndPoint>(clientEndPoint);
+
             var authSkeleton = new AuthSkeleton();
             configuration.Bind(nameof(authSkeleton), authSkeleton);
             services.AddSingleton<AuthSkeleton>(authSkeleton);

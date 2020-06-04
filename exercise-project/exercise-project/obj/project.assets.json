@@ -6901,11 +6901,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DotNetSolutions\\2020-fullstack-exercise\\exercise-project\\exercise-project\\exercise-project.csproj",
+      "projectUniqueName": "E:\\2020-fullstack-exercise-tony\\exercise-project\\exercise-project\\exercise-project.csproj",
       "projectName": "exercise-project",
-      "projectPath": "E:\\DotNetSolutions\\2020-fullstack-exercise\\exercise-project\\exercise-project\\exercise-project.csproj",
+      "projectPath": "E:\\2020-fullstack-exercise-tony\\exercise-project\\exercise-project\\exercise-project.csproj",
       "packagesPath": "C:\\Users\\TonyPhan\\.nuget\\packages\\",
-      "outputPath": "E:\\DotNetSolutions\\2020-fullstack-exercise\\exercise-project\\exercise-project\\obj\\",
+      "outputPath": "E:\\2020-fullstack-exercise-tony\\exercise-project\\exercise-project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
